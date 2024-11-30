@@ -1,3 +1,6 @@
+$animation-avatar-delay: 0.3s;
+$animation-menu-item-delay: $animation-avatar-delay + .1s;
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -20,6 +23,7 @@
 
 .menu {
   display: flex;
+  align-items: center;
   gap: var(--spaces-16);
 }
 
@@ -27,6 +31,17 @@
   font-size: var(--font-size-4);
   color: var(--colors-font-secondary);
   font-weight: 300;
+
+  opacity: 0;
+  transform: translateY(-100%);
+
+  animation: menuItemMount 0.5s forwards;
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: $animation-menu-item-delay + ($i * 0.1s);
+    }
+  }
 
   cursor: pointer;
 
@@ -88,5 +103,35 @@
 .instagram {
   & figure:hover {
     color: var(--colors-social-instagram);
+  }
+}
+
+.avatar {
+  opacity: 0;
+  transform: translateX(-100%);
+
+  animation: avatarMount 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes avatarMount {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuItemMount {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

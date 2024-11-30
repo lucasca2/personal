@@ -6,17 +6,26 @@ import styles from "./Header.module.scss";
 
 import { CODE_PROFILE } from "./constants";
 import { TranslateButton } from "./components/TranslateButton/TranslateButton";
+import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 
 export const Header = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
-        <Avatar src={"/lucas.jpeg"} alt="Profile image" priority />
+        <Avatar
+          src={"/lucas.jpeg"}
+          alt="Profile image"
+          priority
+          className={styles.avatar}
+        />
 
         <div className={styles.menu}>
           <span className={styles.item}>About me</span>
           <span className={styles.item}>Jobs</span>
           <span className={styles.item}>Contact</span>
+          <span className={styles.item}>
+            <ThemeToggle />
+          </span>
         </div>
       </div>
       <div className={styles.content}>

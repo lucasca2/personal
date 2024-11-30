@@ -1,0 +1,46 @@
+.wrapper {
+  all: unset;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: var(--spaces-6);
+  width: var(--spaces-6);
+  cursor: pointer;
+
+  figure {
+    transition: color 0.3s;
+    will-change: color;
+    color: var(--colors-font-secondary);
+  }
+
+  &:hover figure {
+    color: var(--colors-font-primary);
+  }
+}
+
+.moon {
+  width: var(--spaces-5);
+  height: var(--spaces-5);
+
+  transform: scale(0);
+
+  animation: scaleIn 0.3s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.sun {
+  transform: scale(0);
+  
+  animation: scaleIn 0.3s ease forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

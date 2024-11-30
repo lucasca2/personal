@@ -1,17 +1,26 @@
 import Image from "next/image";
 
 import styles from "./Avatar.module.scss";
+import { classNames } from "@/utils/classNames";
 
 type AvatarProps = {
   src: string;
   alt: string;
   priority?: boolean;
+  className?: string;
 };
 
-export const Avatar = ({ src, alt, priority }: AvatarProps) => {
+export const Avatar = ({
+  src,
+  alt,
+  priority,
+  className: _className,
+}: AvatarProps) => {
+  const className = classNames(styles.image, _className);
+
   return (
     <Image
-      className={styles.image}
+      className={className}
       src={src}
       alt={alt}
       width={256}
