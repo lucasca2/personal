@@ -1,0 +1,21 @@
+$mobile: 768px;
+$desktop: 1140px;
+$widescreen: 1920px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) and (max-width: calc($widescreen - 1px)) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media (min-width: $widescreen) {
+    @content;
+  }
+}

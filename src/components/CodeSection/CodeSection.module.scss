@@ -1,0 +1,63 @@
+:global(.light) {
+  --colors-code-keyword: #7a46ef;
+  --colors-code-type: #50b0c1;
+  --colors-code-number: #8c55dd;
+  --colors-code-string: #afb666;
+}
+
+:global(.dark) {
+  --colors-code-keyword: #ff79c6;
+  --colors-code-type: #6cc3d3;
+  --colors-code-number: #bc93f9;
+  --colors-code-string: #f1fa8c;
+}
+
+.wrapper {
+  font-size: var(--font-size-4);
+  line-height: var(--spaces-8);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.lineNumbers {
+  color: var(--colors-font-placeholder);
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: calc(var(--spaces-8) * -1);
+}
+
+.line {
+  color: var(--colors-font-primary);
+
+  & .symbol,
+  & .keyword {
+    color: var(--colors-code-keyword);
+  }
+
+  & .type,
+  & .className {
+    color: var(--colors-code-type);
+  }
+
+  & .string {
+    color: var(--colors-code-string);
+  }
+
+  & .number {
+    color: var(--colors-code-number);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200ch;
+  }
+}
+

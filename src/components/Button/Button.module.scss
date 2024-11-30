@@ -1,0 +1,32 @@
+:global(.light) {
+  --colors-components-button-background: var(--colors-light-gray-100);
+  --colors-components-button-background_hover: var(--colors-light-gray-200);
+  --colors-components-button-border: var(--colors-light-gray-200);
+}
+
+:global(.dark) {
+  --colors-components-button-background: var(--colors-dark-gray-900);
+  --colors-components-button-background_hover: var(--colors-dark-gray-800);
+  --colors-components-button-border: var(--colors-dark-gray-800);
+}
+
+.button {
+  all: unset;
+  padding: var(--spaces-4) var(--spaces-8);
+
+  font-size: var(--font-size-3);
+  color: var(--colors-font-primary);
+
+  background-color: var(--colors-components-button-background);
+  border: 1px solid var(--colors-components-button-border);
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+  will-change: background-color;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--colors-components-button-background_hover);
+  }
+}

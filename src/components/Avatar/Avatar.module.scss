@@ -1,0 +1,8 @@
+.image {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 100%;
+
+  width: var(--spaces-16);
+  height: var(--spaces-16);
+}

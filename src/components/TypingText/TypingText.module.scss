@@ -1,0 +1,21 @@
+.typing {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+
+  animation-name: typing;
+  animation-duration: var(--typing-duration);
+  animation-timing-function: steps(var(--typing-length), start);
+  animation-fill-mode: forwards;
+  animation-delay: var(--typing-delay);
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--typing-width);
+    }
+  }
+}

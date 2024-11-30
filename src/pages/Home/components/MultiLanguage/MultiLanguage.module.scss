@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spaces-6);
+
+  padding: var(--spaces-6) 0 0;
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+
+  transition: filter 0.5s;
+  will-change: filter;
+
+  &:not(.isActive) {
+    filter: grayscale(1);
+  }
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

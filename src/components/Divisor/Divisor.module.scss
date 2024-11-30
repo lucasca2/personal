@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--colors-font-placeholder);
+
+  font-size: var(--font-size-2);
+  line-height: var(--spaces-8);
+}
+
+.withLines {
+  gap: var(--spaces-4);
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    max-width: var(--max-width-lines);
+  }
+}

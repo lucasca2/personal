@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  flex: 1;
+  justify-content: flex-start;
+  padding: var(--spaces-6) 0 var(--spaces-20);
+
+  gap: var(--spaces-16);
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: var(--spaces-16);
+}
+
+.item {
+  font-size: var(--font-size-4);
+  color: var(--colors-font-secondary);
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition: color 0.3s, font-weight 0.3s;
+  will-change: color, font-weight;
+
+  &:hover {
+    color: var(--colors-font-primary);
+    font-weight: 400;
+  }
+}
+
+.content {
+}
+
+.bottom {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: var(--spaces-14);
+
+  & figure {
+    color: var(--colors-font-secondary);
+  }
+}
+
+.linkedin,
+.whatsapp,
+.github,
+.instagram {
+  cursor: pointer;
+
+  & figure {
+    transition: color 0.3s;
+  }
+}
+
+.linkedin {
+  & figure:hover {
+    color: var(--colors-social-linkedin);
+  }
+}
+
+.whatsapp {
+  & figure:hover {
+    color: var(--colors-social-whatsapp);
+  }
+}
+
+.github {
+  & figure:hover {
+    color: var(--colors-social-github);
+  }
+}
+
+.instagram {
+  & figure:hover {
+    color: var(--colors-social-instagram);
+  }
+}
