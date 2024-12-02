@@ -8,7 +8,12 @@
 
   margin: 0 auto;
   min-height: 100vh;
-  max-width: var(--max-width-content);
+  max-width: calc(var(--max-width-content) + var(--spaces-14) * 2);
+  padding: 0 var(--spaces-14);
+
+  @include breakpoints.mobile { 
+    padding: 0 var(--spaces-8);
+  }
 }
 
 .header {

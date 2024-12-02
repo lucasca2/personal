@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: var(--spaces-16);
+
+  transition: opacity 0.3s, transform 0.5s;
+
+  opacity: 0;
+  transform: translateX(-10%);
+
+  animation: slideRight 0.72s forwards;
+  animation-delay: 0.3s;
+}
+
+.hidden {
+  opacity: 1;
+  transform: translateX(0);
+
+  animation: slideLeft 0.3s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

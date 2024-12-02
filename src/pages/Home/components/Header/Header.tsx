@@ -1,12 +1,9 @@
 import { Avatar } from "@/components/Avatar/Avatar";
 import { Icon } from "@/components/Icon/Icon";
-import { CodeSection } from "@/components/CodeSection/CodeSection";
+import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
+import { Content } from "./components/Content/Content";
 
 import styles from "./Header.module.scss";
-
-import { CODE_PROFILE } from "./constants";
-import { TranslateButton } from "./components/TranslateButton/TranslateButton";
-import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 
 export const Header = () => {
   return (
@@ -20,18 +17,15 @@ export const Header = () => {
         />
 
         <div className={styles.menu}>
-          <span className={styles.item}>About me</span>
+          {/* <span className={styles.item}>About me</span>
           <span className={styles.item}>Jobs</span>
-          <span className={styles.item}>Contact</span>
+          <span className={styles.item}>Contact</span> */}
           <span className={styles.item}>
             <ThemeToggle />
           </span>
         </div>
       </div>
-      <div className={styles.content}>
-        <CodeSection lines={CODE_PROFILE} />
-      </div>
-      <TranslateButton />
+      <Content />
       <div className={styles.bottom}>
         <a
           href="https://www.instagram.com/lucascostamaral/"

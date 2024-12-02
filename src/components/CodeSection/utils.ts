@@ -9,7 +9,7 @@ export const reservedWordsClassNames = [
 
   // Get types
   {
-    regex: /(\bstring\b|\bnumber\b|\bTechnologies\b)/,
+    regex: /(\bstring\b|\bnumber\b|\bTecnologia\b|\bTechnology\b)/,
     className: styles.type,
   },
 

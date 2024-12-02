@@ -1,9 +1,51 @@
-export const CODE_PROFILE = [
-  "class Developer {",
-  "    public name: string = 'Lucas Costa Amaral';",
-  "    public age: number = 27;",
-  "    public stack: Technologies[] = ['ReactJS', 'React Native', 'NodeJS'];",
-  "}",
-  " ",
-  "new Developer();",
-];
+export const CODE_PROFILE_EN = {
+  desktop: [
+    "class Developer {",
+    "    public name: string = 'Lucas Costa Amaral';",
+    "    public age: number = 27;",
+    "    public stack: Technology[] = ['ReactJS', 'React Native', 'NodeJS'];",
+    "}",
+    " ",
+    "new Developer();",
+  ],
+  mobile: [
+    "class Developer {",
+    "    public name: string =",
+    "        'Lucas Costa Amaral';",
+    "    public age: number = 27;",
+    "    public stack: Technology[] = [",
+    "        'ReactJS',",
+    "        'React Native',",
+    "        'NodeJS'",
+    "    ];",
+    "}",
+    " ",
+    "new Developer();",
+  ],
+};
+
+export const CODE_PROFILE_PT = {
+  desktop: [
+    "class Programador {",
+    "    public nome: string = 'Lucas Costa Amaral';",
+    "    public idade: number = 27;",
+    "    public tecnologias: Tecnologia[] = ['ReactJS', 'React Native', 'NodeJS'];",
+    "}",
+    " ",
+    "new Programador();",
+  ],
+  mobile: [
+    "class Programador {",
+    "    public nome: string =",
+    "        'Lucas Costa Amaral';",
+    "    public idade: number = 27;",
+    "    public stack: Tecnologia[] = [",
+    "        'ReactJS',",
+    "        'React Native',",
+    "        'NodeJS'",
+    "    ];",
+    "}",
+    " ",
+    "new Programador();",
+  ],
+};

@@ -5,4 +5,9 @@
 
   width: var(--spaces-16);
   height: var(--spaces-16);
+
+  @include breakpoints.mobile {
+    width: var(--spaces-12);
+    height: var(--spaces-12);
+  }
 }

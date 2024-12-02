@@ -3,11 +3,12 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
+  disabled?: boolean;
 };
 
-export const Button = ({ children, ...props }: ButtonProps) => {
+export const Button = ({ children, disabled, ...props }: ButtonProps) => {
   return (
-    <button className={styles.button} {...props}>
+    <button className={styles.button} disabled={disabled} {...props}>
       {children}
     </button>
   );

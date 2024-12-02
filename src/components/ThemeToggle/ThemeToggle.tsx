@@ -1,45 +1,27 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "../Icon/Icon";
 import styles from "./ThemeToggle.module.scss";
-
-type Theme = "light" | "dark";
-
-const THEME_KEY = "@lucas/theme";
+import { getStoragedTheme, setStoragedTheme, Theme } from "./ThemeToggle.actions";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const htmlElement = useRef<HTMLElement | null>();
+  const [theme, setTheme] = useState<Theme | undefined>();
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      htmlElement.current = document.querySelector("html");
-
-      const savedTheme = localStorage.getItem(THEME_KEY) as Theme;
-
-      if (savedTheme) {
-        setTheme(savedTheme);
-      }
-    }
-  }, []);
-
-  const handleToggleTheme = () => {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === "dark" ? "light" : "dark";
-
-      localStorage.setItem(THEME_KEY, newTheme);
-
-      return newTheme;
-    });
+  const fetchInitialTheme = async () => {
+    const storedTheme = await getStoragedTheme();
+    setTheme(storedTheme);
   };
 
   useEffect(() => {
-    if (htmlElement.current) {
-      htmlElement.current.classList.remove("light", "dark");
-      htmlElement.current.classList.add(theme);
-    }
-  }, [theme]);
+    fetchInitialTheme();
+  }, []);
+
+  const handleToggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    setStoragedTheme(newTheme);
+  };
 
   return (
     <button className={styles.wrapper} onClick={handleToggleTheme}>

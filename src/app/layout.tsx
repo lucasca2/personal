@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/global.scss";
 
 import { Fira_Code } from "next/font/google";
+import { getStoragedTheme } from "@/components/ThemeToggle/ThemeToggle.actions";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -11,17 +12,17 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Lucas Costa Amaral | Senior FrontEnd Developer",
   description: "Senior FrontEnd Developer",
-
-  // <meta http-equiv="Content-Language" content="pt,en">
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const storagedTheme = await getStoragedTheme();
+
   return (
-    <html lang="en" className="dark" translate="no">
+    <html lang="en" className={storagedTheme} translate="no">
       <head>
         <meta httpEquiv="Content-Language" content="pt,en" />
         <meta name="google" content="notranslate" />

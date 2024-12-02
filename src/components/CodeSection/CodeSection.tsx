@@ -1,21 +1,25 @@
 import { TypingText } from "@/components/TypingText/TypingText";
-import { randomKey } from "@/utils/randomKey";
 
 import styles from "./CodeSection.module.scss";
 import { getDelay, getDuration, injectReservedWordsClassNames } from "./utils";
+import { useMemo } from "react";
+import { randomKey } from "@/utils/randomKey";
 
 type EditorSectionProps = {
   lines: string[];
 };
 
 export const CodeSection = ({ lines }: EditorSectionProps) => {
-  const key = randomKey();
+  const key = useMemo(() => {
+    return randomKey();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lines]);
 
   return (
     <div className={styles.wrapper} translate="no">
       <div className={styles.lineNumbers}>
         {lines.map((_, index) => (
-          <span key={`${key}-line-${index}`}>{index + 1}</span>
+          <span key={`code-line-number-${index}-${key}`}>{index + 1}</span>
         ))}
       </div>
 
@@ -25,7 +29,7 @@ export const CodeSection = ({ lines }: EditorSectionProps) => {
 
         return (
           <TypingText
-            key={`${key}-${index}`}
+            key={`code-line-${index}-${key}`}
             className={styles.line}
             width={line.length}
             duration={duration}

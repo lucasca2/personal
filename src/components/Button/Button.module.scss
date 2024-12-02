@@ -1,21 +1,25 @@
 :global(.light) {
-  --colors-components-button-background: var(--colors-light-gray-100);
-  --colors-components-button-background_hover: var(--colors-light-gray-200);
-  --colors-components-button-border: var(--colors-light-gray-200);
+  --colors-components-button-background: var(--colors-light-gray-800);
+  --colors-components-button-background_hover: var(--colors-light-gray-700);
+  --colors-components-button-border: var(--colors-light-gray-700);
+  --colors-components-button-font: var(--colors-base-white);
 }
 
 :global(.dark) {
   --colors-components-button-background: var(--colors-dark-gray-900);
   --colors-components-button-background_hover: var(--colors-dark-gray-800);
   --colors-components-button-border: var(--colors-dark-gray-800);
+  --colors-components-button-font: var(--colors-base-white);
 }
 
 .button {
   all: unset;
-  padding: var(--spaces-4) var(--spaces-8);
+  padding: var(--spaces-3) var(--spaces-8);
 
-  font-size: var(--font-size-3);
-  color: var(--colors-font-primary);
+  font-size: var(--font-size-4);
+  color: var(--colors-components-button-font);
+
+  border-radius: var(--spaces-1);
 
   background-color: var(--colors-components-button-background);
   border: 1px solid var(--colors-components-button-border);
@@ -28,5 +32,10 @@
   &:hover {
     cursor: pointer;
     background-color: var(--colors-components-button-background_hover);
+  }
+
+  @include breakpoints.mobile { 
+    font-size: var(--font-size-3);
+    padding: var(--spaces-3) var(--spaces-6);
   }
 }
