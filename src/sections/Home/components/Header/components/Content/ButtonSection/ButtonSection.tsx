@@ -1,15 +1,12 @@
 "use client";
 
 import { Button } from "@/components/Button/Button";
-import { getDelay } from "@/components/CodeSection/utils";
-import { CODE_PROFILE_EN } from "@/pages/Home/components/Header/constants";
 
 import { CSSProperties, useMemo } from "react";
 import { useShouldHide } from "@/hooks/useShouldHide";
 import { classNames } from "@/utils/classNames";
 
 import styles from "./ButtonSection.module.scss";
-import { useMedia } from "@/hooks/useMedia";
 
 type ButtonSectionProps = {
   onClick: () => void;

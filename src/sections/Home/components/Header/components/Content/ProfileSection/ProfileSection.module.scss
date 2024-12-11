@@ -1,13 +1,3 @@
-:global(.light) {
-  --colors-components-badge-background: var(--colors-light-gray-900);
-  --colors-components-badge-font: var(--colors-base-white);
-}
-
-:global(.dark) {
-  --colors-components-badge-background: var(--colors-dark-gray-950);
-  --colors-components-badge-font: var(--colors-base-white);
-}
-
 $animation-title-delay: 0.5s;
 $animation-age-delay: $animation-title-delay + 0.1s;
 $animation-subtitle-delay: $animation-age-delay + 0.01s;

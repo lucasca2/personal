@@ -1,17 +1,3 @@
-:global(.light) {
-  --colors-code-keyword: #7a46ef;
-  --colors-code-type: #50b0c1;
-  --colors-code-number: #8c55dd;
-  --colors-code-string: #afb666;
-}
-
-:global(.dark) {
-  --colors-code-keyword: #ff79c6;
-  --colors-code-type: #6cc3d3;
-  --colors-code-number: #bc93f9;
-  --colors-code-string: #f1fa8c;
-}
-
 .wrapper {
   font-size: var(--font-size-4);
   line-height: var(--spaces-8);

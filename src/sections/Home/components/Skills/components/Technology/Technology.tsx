@@ -4,7 +4,7 @@ import { Icon, IconName } from "@/components/Icon/Icon";
 import styles from "./Technology.module.scss";
 import { classNames } from "@/utils/classNames";
 import dayjs from "dayjs";
-import { MouseEventHandler, useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect } from "react";
 import { useInView } from "@/hooks/useInView";
 import { useDictionary } from "@/locale/useDictionary";
 
@@ -29,33 +29,38 @@ export const Technology = ({
     [styles.inView]: inView,
   });
 
-  const handleOnMouseMove = useCallback((e: MouseEvent) => {
-    if (cardRef.current) {
-      const rect = cardRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+  const handleOnMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (cardRef.current) {
+        const rect = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
 
-      const rotateX = ((centerY - y) / centerY) * 2.5;
-      const rotateY = ((x - centerX) / centerX) * 2.5;
+        const rotateX = ((centerY - y) / centerY) * 2.5;
+        const rotateY = ((x - centerX) / centerX) * 2.5;
 
-      const maxRotation = 10;
-      const limitedRotateX = Math.max(
-        -maxRotation,
-        Math.min(maxRotation, rotateX)
-      );
-      const limitedRotateY = Math.max(
-        -maxRotation,
-        Math.min(maxRotation, rotateY)
-      );
+        const maxRotation = 10;
+        const limitedRotateX = Math.max(
+          -maxRotation,
+          Math.min(maxRotation, rotateX)
+        );
+        const limitedRotateY = Math.max(
+          -maxRotation,
+          Math.min(maxRotation, rotateY)
+        );
 
-      cardRef.current.style.animation = "none";
-      cardRef.current.style.opacity = "1";
-      cardRef.current.style.transform = `perspective(1500px) rotateX(${limitedRotateX}deg) rotateY(${limitedRotateY}deg)`;
-    }
-  }, []);
+        cardRef.current.style.animation = "none";
+        cardRef.current.style.opacity = "1";
+        cardRef.current.style.transform = `perspective(1500px) rotateX(${limitedRotateX}deg) rotateY(${limitedRotateY}deg)`;
+      }
+    },
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   useEffect(() => {
     if (inView) {

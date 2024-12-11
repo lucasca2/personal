@@ -3,7 +3,7 @@ import { contactReceivedEmail } from "@/emails/contactReceivedEmail";
 import { sendEmail } from "@/utils/sendEmail";
 import mjml2html from "mjml";
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 

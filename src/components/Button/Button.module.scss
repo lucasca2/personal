@@ -1,17 +1,3 @@
-:global(.light) {
-  --colors-components-button-background: rgba(0, 0, 0, .9);
-  --colors-components-button-background_hover: rgba(0, 0, 0, .75);
-  --colors-components-button-border: rgba(0, 0, 0, 1);
-  --colors-components-button-font: var(--colors-base-white);
-}
-
-:global(.dark) {
-  --colors-components-button-background: rgba(0, 0, 0, .1);
-  --colors-components-button-background_hover: rgba(0, 0, 0, .25);
-  --colors-components-button-border: rgba(0, 0, 0, .5);
-  --colors-components-button-font: var(--colors-base-white);
-}
-
 .button {
   all: unset;
   box-sizing: border-box;

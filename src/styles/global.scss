@@ -113,6 +113,34 @@ html.light {
   // Technologies
   --color-react: #4cbcd6;
   //
+
+  // Components
+  --colors-components-button-background: rgba(0, 0, 0, 0.9);
+  --colors-components-button-background_hover: rgba(0, 0, 0, 0.75);
+  --colors-components-button-border: rgba(0, 0, 0, 1);
+  --colors-components-button-font: var(--colors-base-white);
+
+  --colors-components-pattern-background: rgba(255, 255, 255, 0.2);
+
+  --colors-code-keyword: #7a46ef;
+  --colors-code-type: #50b0c1;
+  --colors-code-number: #8c55dd;
+  --colors-code-string: #afb666;
+
+  --colors-components-input-background: rgba(0, 0, 0, 0.025);
+  --colors-components-input-border: rgba(0, 0, 0, 0.2);
+  --colors-components-input-border_focused: rgba(0, 0, 0, 0.9);
+  --colors-components-input-font: var(--colors-base-black);
+
+  --colors-components-badge-background: var(--colors-light-gray-900);
+  --colors-components-badge-font: var(--colors-base-white);
+
+  --colors-components-card-background: rgba(0, 0, 0, 0.025);
+  --colors-components-card-background_hover: rgba(0, 0, 0, 0.2);
+  --colors-components-card-border: rgba(0, 0, 0, 0.2);
+  --colors-components-card-font: var(--colors-base-black);
+
+  --colors-components-card-bar-background: rgba(0, 0, 0, 0.15);
 }
 
 html.dark {
@@ -135,6 +163,34 @@ html.dark {
 
   // Technologies
   --color-react: #4cbcd6;
+
+  // Components
+  --colors-components-button-background: rgba(0, 0, 0, 0.1);
+  --colors-components-button-background_hover: rgba(0, 0, 0, 0.25);
+  --colors-components-button-border: rgba(0, 0, 0, 0.5);
+  --colors-components-button-font: var(--colors-base-white);
+
+  --colors-components-pattern-background: rgba(0, 0, 0, 0.1);
+
+  --colors-code-keyword: #ff79c6;
+  --colors-code-type: #6cc3d3;
+  --colors-code-number: #bc93f9;
+  --colors-code-string: #f1fa8c;
+
+  --colors-components-input-background: rgba(0, 0, 0, 0.1);
+  --colors-components-input-border: rgba(0, 0, 0, 0.5);
+  --colors-components-input-border_focused: rgba(255, 255, 255, 0.35);
+  --colors-components-input-font: var(--colors-base-white);
+
+  --colors-components-badge-background: var(--colors-dark-gray-950);
+  --colors-components-badge-font: var(--colors-base-white);
+
+  --colors-components-card-background: rgba(0, 0, 0, 0.15);
+  --colors-components-card-background_hover: rgba(0, 0, 0, 0.5);
+  --colors-components-card-border: rgba(0, 0, 0, 0.5);
+  --colors-components-card-font: var(--colors-base-white);
+
+  --colors-components-card-bar-background: rgba(255, 255, 255, 0.15);
 }
 
 * {

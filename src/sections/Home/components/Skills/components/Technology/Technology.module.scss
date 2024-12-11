@@ -1,21 +1,3 @@
-:global(.light) {
-  --colors-components-card-background: rgba(0, 0, 0, 0.025);
-  --colors-components-card-background_hover: rgba(0, 0, 0, 0.2);
-  --colors-components-card-border: rgba(0, 0, 0, 0.2);
-  --colors-components-card-font: var(--colors-base-black);
-
-  --colors-components-card-bar-background: rgba(0, 0, 0, 0.15);
-}
-
-:global(.dark) {
-  --colors-components-card-background: rgba(0, 0, 0, 0.15);
-  --colors-components-card-background_hover: rgba(0, 0, 0, 0.5);
-  --colors-components-card-border: rgba(0, 0, 0, 0.5);
-  --colors-components-card-font: var(--colors-base-white);
-
-  --colors-components-card-bar-background: rgba(255, 255, 255, 0.15);
-}
-
 .wrapper {
   --max-width-card-content: 16rem;
 

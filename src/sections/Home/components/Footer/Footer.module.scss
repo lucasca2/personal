@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spaces-20) 0 var(--spaces-4) 0;
+  gap: var(--spaces-8);
+}
+
+.copyRight {
+  display: flex;
+  justify-content: center;
+  gap: var(--spaces-2);
+  font-size: var(--font-size-1);
+  color: var(--colors-font-secondary);
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+}

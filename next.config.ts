@@ -7,9 +7,7 @@ const nextConfig: NextConfig = {
     prependData: `@use "@/styles/breakpoints.scss";`,
     silenceDeprecations: ["legacy-js-api"],
   },
-  experimental: {
-    serverComponentsExternalPackages: ["mjml"],
-  },
+  serverExternalPackages: ["mjml"],
 };
 
 export default nextConfig;
