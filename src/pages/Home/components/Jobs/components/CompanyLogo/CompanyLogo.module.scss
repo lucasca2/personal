@@ -1,0 +1,62 @@
+.wrapper {
+  // height: var(--spaces-6);
+  height: var(--spaces-20);
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+
+  // opacity: 0;
+  // transform: translateY(25%);
+}
+
+.image {
+  cursor: pointer;
+
+  object-fit: contain;
+  object-position: center;
+
+  width: auto;
+  width: 20rem;
+  height: 100%;
+
+  filter: grayscale(1);
+  opacity: 0.75;
+
+  transition: filter 0.3s, opacity 0.3s;
+  will-change: filter, opacity;
+
+  &:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+// .inView {
+//   animation: slideIn 0.3s ease-out forwards;
+
+//   @for $i from 1 through 15 {
+//     &:nth-child(#{$i}) {
+//       animation-delay: 0.3s + ($i * 0.05s);
+//     }
+//   }
+
+//   @include breakpoints.mobile {
+//     @for $i from 1 through 15 {
+//       &:nth-child(#{$i}) {
+//         animation-delay: ($i * 0.05s);
+//       }
+//     }
+//   }
+// }
+
+// @keyframes slideIn {
+//   from {
+//     opacity: 0;
+//     transform: translateY(25%);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }

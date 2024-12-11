@@ -1,0 +1,155 @@
+{
+    "title": "Lucas Costa Amaral - Desenvolvedor Front End",
+    "description": "Desenvolvedor Front End Senior, especializado em React.js, React Native e Node.js. Entre em contato!",
+    "common": {
+        "years": "anos"
+    },
+    "home": {
+        "sections": {
+            "about": "sobre-mim",
+            "jobs": "trabalhos",
+            "skills": "habilidades",
+            "contact": "contato"
+        },
+        "translate_button": "Traduzir para Linguagem Humana",
+        "go_back_button": "Voltar",
+        "menu": {
+            "about": "Sobre mim",
+            "jobs": "Trabalhos",
+            "contact": "Contato"
+        },
+        "profile": {
+            "age": "27 anos",
+            "position": "Desenvolvedor Front End Senior",
+            "code": {
+                "desktop": [
+                    "class Programador {",
+                    "    public nome: string = 'Lucas Costa Amaral';",
+                    "    public idade: number = 27;",
+                    "    public tecnologias: Tecnologia[] = ['ReactJS', 'React Native', 'NodeJS'];",
+                    "}",
+                    " ",
+                    "new Programador();"
+                ],
+                "mobile": [
+                    "class Programador {",
+                    "    public nome: string =",
+                    "        'Lucas Costa Amaral';",
+                    "    public idade: number = 27;",
+                    "    public stack: Tecnologia[] = [",
+                    "        'ReactJS',",
+                    "        'React Native',",
+                    "        'NodeJS'",
+                    "    ];",
+                    "}",
+                    " ",
+                    "new Programador();"
+                ]
+            }
+        },
+        "about": {
+            "code": {
+                "desktop": [
+                    "Eaí, meu nome é 'Lucas', tenho 27 anos, moro em 'Tubarão, SC, Brasil', e sou desenvolvedor front-end.",
+                    " ",
+                    "Minha carreira no desenvolvimento começou de um jeito diferente. Em 2016, iniciei um curso de",
+                    "Psicologia porque ganhei uma bolsa de estudos. Mas logo percebi que aquilo não era para mim.",
+                    "E então eu tive que tomar a difícil decisão de largar a bolsa e ir atrás de algo que fizesse",
+                    "mais sentido para mim e para o que eu queria para o meu futuro.",
+                    " ",
+                    "Nesse mesmo ano, me matriculei em um curso de TI na minha cidade, principalmente porque",
+                    "(<s>não queria meus pais brigando comigo por ficar em casa fazendo nada</s>) sempre tive",
+                    "muita afinidade com computadores desde criança, o que me motivou a buscar algo nessa área.",
+                    " ",
+                    "Antes de começar o curso, achei que aprenderia coisas como formatar PCs ou consertar peças.",
+                    "Mas... eu tava totalmente errado! Quando comecei a aprender sobre lógica de programação e algoritmos,",
+                    "percebi que era exatamente isso que eu queria fazer da minha vida.",
+                    " ",
+                    "Em 2017, consegui meu primeiro estágio, e desde então nunca mais parei. Trabalhei com várias linguagens",
+                    "de programação: comecei com Delphi, passei por PHP, Vanilla JS, JQuery, AngularJS",
+                    "e, finalmente, cheguei às minhas favoritas: 'React.js' e 'Node.js'.",
+                    " ",
+                    "Foi aí que decidi me especializar de verdade. Hoje, trabalho com 'React.js' para web,",
+                    "'React Native' para criação de aplicativos e 'Node.js' para criação de APIs."
+                ],
+                "mobile": [
+                    "Oi, sou o 'Lucas', tenho 27 anos,",
+                    "moro em 'Tubarão, SC, Brasil',",
+                    "e sou desenvolvedor front-end.",
+                    " ",
+                    "Minha carreira no desenvolvimento",
+                    "começou de um jeito diferente.",
+                    "Em 2016, iniciei um curso de",
+                    "Psicologia porque ganhei uma",
+                    "bolsa de estudos. Mas logo percebi",
+                    "que aquilo não era para mim. Então,",
+                    "tive que tomar a difícil decisão de",
+                    "largar a bolsa e ir atrás de algo",
+                    "que fizesse mais sentido para mim.",
+                    " ",
+                    "Nesse mesmo ano, me matriculei",
+                    "em um curso de TI na minha cidade,",
+                    "principalmente porque (<s>não queria</s>",
+                    "<s>meus pais brigando comigo por</s>",
+                    "<s>ficar em casa fazendo nada</s>)",
+                    "sempre tive afinidade com",
+                    "computadores desde criança.",
+                    " ",
+                    "Antes de começar o curso, achei que",
+                    "ia aprender coisas como formatar",
+                    "PCs ou consertar peças.",
+                    "Mas... eu tava totalmente errado!",
+                    "Quando comecei a aprender lógica",
+                    "de programação e algoritmos, percebi",
+                    "que era isso que eu queria fazer da",
+                    "vida (por mais estranho que pareça).",
+                    " ",
+                    "Adorei lógica de programação desde",
+                    "o começo e estudei muito por conta",
+                    "própria. Até que, em 2017, consegui",
+                    "meu primeiro estágio e, desde então,",
+                    "nunca mais parei.",
+                    " ",
+                    "Ao longo dos anos, trabalhei com",
+                    "várias linguagens de programação.",
+                    "Comecei com Delphi, passei por PHP,",
+                    "Vanilla JS, JQuery, AngularJS e,",
+                    "finalmente, cheguei às minhas",
+                    "favoritas: 'React.js' e 'Node.js'.",
+                    " ",
+                    "Foi aí que decidi me especializar",
+                    "de verdade. Hoje, trabalho com",
+                    "'React.js' para web, 'React Native'",
+                    "para apps e 'Node.js' para APIs."
+                ]
+            }
+        },
+        "contact": {
+            "title": "Quer construir um app?",
+            "subtitle": "Entre em contato!",
+            "fields": {
+                "name": {
+                    "label": "Nome",
+                    "placeholder": "Seu nome"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "Seu melhor email"
+                },
+                "message": {
+                    "label": "Mensagem",
+                    "placeholder": "Mensagem aqui..."
+                }
+            },
+            "errors": {
+                "name_required": "Nome é obrigatório",
+                "email_required": "E-mail é obrigatório",
+                "message_required": "Mensagem é obrigatória",
+                "email_invalid": "E-mail inválido"
+            },
+            "send_button": "Enviar",
+            "thanks_message": "Obrigado por entrar em contato!",
+            "success_message": "Em breve retornarei."
+        }
+    }
+}

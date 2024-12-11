@@ -1,20 +1,21 @@
 "use client";
 
 import { CodeSection } from "@/components/CodeSection/CodeSection";
-import { CODE_PROFILE_EN } from "../../../constants";
 
 import styles from "./CodeProfileSection.module.scss";
 import { useMemo } from "react";
 import { classNames } from "@/utils/classNames";
 import { useShouldHide } from "@/hooks/useShouldHide";
-import { useMedia } from "@/hooks/useMedia";
 
 type CodeProfileSectionProps = {
+  code: string[];
   isHuman: boolean;
 };
 
-export const CodeProfileSection = ({ isHuman }: CodeProfileSectionProps) => {
-  const { isMobile } = useMedia();
+export const CodeProfileSection = ({
+  isHuman,
+  code,
+}: CodeProfileSectionProps) => {
   const { shouldHide, shouldRender } = useShouldHide({
     condition: isHuman,
     timeout: 300,
@@ -29,7 +30,7 @@ export const CodeProfileSection = ({ isHuman }: CodeProfileSectionProps) => {
 
   return (
     <div className={className}>
-      <CodeSection lines={isMobile ? CODE_PROFILE_EN.mobile : CODE_PROFILE_EN.desktop} />
+      <CodeSection lines={code} />
     </div>
   );
 };

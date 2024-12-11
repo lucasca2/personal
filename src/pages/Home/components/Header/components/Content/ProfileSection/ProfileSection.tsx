@@ -2,12 +2,15 @@ import { useShouldHide } from "@/hooks/useShouldHide";
 import styles from "./ProfileSection.module.scss";
 import { classNames } from "@/utils/classNames";
 import { useMemo } from "react";
+import { useDictionary } from "@/locale/useDictionary";
 
 type ProfileSectionProps = {
   isHuman: boolean;
 };
 
 export const ProfileSection = ({ isHuman }: ProfileSectionProps) => {
+  const { dictionary } = useDictionary();
+  
   const { shouldHide, shouldRender } = useShouldHide({
     condition: !isHuman,
     timeout: 300,
@@ -23,8 +26,8 @@ export const ProfileSection = ({ isHuman }: ProfileSectionProps) => {
   return (
     <div className={className}>
       <h1>Lucas Costa Amaral</h1>
-      <span className={styles.age}>27 years old</span>
-      <p>Senior Front End Developer</p>
+      <span className={styles.age}>{dictionary?.home.profile.age}</span>
+      <p>{dictionary?.home.profile.position}</p>
       <div className={styles.wrapperTechnologies}>
         <div className={styles.technology}>
           <span>React.JS</span>

@@ -7,6 +7,7 @@ type TypingTextProps = HTMLAttributes<HTMLSpanElement> & {
   width: number;
   duration: number;
   delay?: number;
+  shouldStart?: boolean;
 };
 
 export const TypingText = ({
@@ -15,9 +16,17 @@ export const TypingText = ({
   width,
   duration,
   delay = 0,
+  shouldStart = true,
   ...props
 }: TypingTextProps) => {
-  const className = classNames(styles.typing, _className);
+  const className = classNames(
+    styles.typing,
+    styles.typing_animation__initial,
+    _className,
+    {
+      [styles.typing_animation]: shouldStart,
+    }
+  );
 
   const variables = {
     ["--typing-length"]: width,

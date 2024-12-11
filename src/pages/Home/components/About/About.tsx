@@ -1,22 +1,15 @@
-"use client";
-
 import { Divisor } from "@/components/Divisor/Divisor";
 import styles from "./About.module.scss";
-import { CodeSection } from "@/components/CodeSection/CodeSection";
-import { ABOUT_ME_EN } from "./constants";
-import { useMedia } from "@/hooks/useMedia";
+import { AboutCodeSection } from "./components/AboutCodeSection";
+import { getDictionary } from "@/locale/actions";
 
-export const About = () => {
-  const { isMobile } = useMedia();
+export const About = async () => {
+  const dictionary = await getDictionary();
 
   return (
-    <section className={styles.wrapper}>
-      <Divisor withLines>{`<about-me>`}</Divisor>
-      <div className={styles.content}>
-        <CodeSection
-          lines={isMobile ? ABOUT_ME_EN.mobile : ABOUT_ME_EN.desktop}
-        />
-      </div>
+    <section id="section-about" className={styles.wrapper}>
+      <Divisor withLines>{`<${dictionary?.home.sections.about}>`}</Divisor>
+      <AboutCodeSection code={dictionary.home.about.code} />
     </section>
   );
 };

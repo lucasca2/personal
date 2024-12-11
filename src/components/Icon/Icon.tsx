@@ -9,6 +9,8 @@ import { Linkedin } from "./icons/Linkedin";
 import { Moon } from "./icons/Moon";
 import { Sun } from "./icons/Sun";
 import { Whatsapp } from "./icons/Whatsapp";
+import { Node } from "./icons/Node";
+import { React } from "./icons/React";
 
 const icons = {
   instagram: Instagram,
@@ -21,9 +23,12 @@ const icons = {
 
   moon: Moon,
   sun: Sun,
+
+  node: Node,
+  react: React,
 };
 
-type IconName = keyof typeof icons;
+export type IconName = keyof typeof icons;
 
 type IconProps = {
   name: IconName;

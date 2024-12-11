@@ -1,37 +1,50 @@
 :global(.light) {
-  --colors-components-button-background: var(--colors-light-gray-800);
-  --colors-components-button-background_hover: var(--colors-light-gray-700);
-  --colors-components-button-border: var(--colors-light-gray-700);
+  --colors-components-button-background: rgba(0, 0, 0, .9);
+  --colors-components-button-background_hover: rgba(0, 0, 0, .75);
+  --colors-components-button-border: rgba(0, 0, 0, 1);
   --colors-components-button-font: var(--colors-base-white);
 }
 
 :global(.dark) {
-  --colors-components-button-background: var(--colors-dark-gray-900);
-  --colors-components-button-background_hover: var(--colors-dark-gray-800);
-  --colors-components-button-border: var(--colors-dark-gray-800);
+  --colors-components-button-background: rgba(0, 0, 0, .1);
+  --colors-components-button-background_hover: rgba(0, 0, 0, .25);
+  --colors-components-button-border: rgba(0, 0, 0, .5);
   --colors-components-button-font: var(--colors-base-white);
 }
 
 .button {
   all: unset;
-  padding: var(--spaces-3) var(--spaces-8);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 var(--spaces-8);
+  height: var(--spaces-10);
 
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-3);
+
   color: var(--colors-components-button-font);
 
   border-radius: var(--spaces-1);
 
   background-color: var(--colors-components-button-background);
-  border: 1px solid var(--colors-components-button-border);
+  border: 0.1rem solid var(--colors-components-button-border);
 
   cursor: pointer;
 
-  transition: background-color 0.3s;
-  will-change: background-color;
+  transition: background-color 0.3s, opacity 0.3s;
+  will-change: background-color, opacity;
 
-  &:hover {
+  &:not(:disabled):hover {
     cursor: pointer;
     background-color: var(--colors-components-button-background_hover);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .4;
+  }
+
+  &__loading {
+    cursor: wait !important;
   }
 
   @include breakpoints.mobile { 

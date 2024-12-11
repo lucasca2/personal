@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spaces-10);
+
+  h2 {
+    font-size: var(--font-size-4);
+    line-height: var(--spaces-7);
+    color: var(--colors-font-primary);
+    margin-top: var(--spaces-10);
+    align-self: center;
+
+    @include breakpoints.mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spaces-5) 0;
+  align-items: center;
+  gap: var(--spaces-10);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

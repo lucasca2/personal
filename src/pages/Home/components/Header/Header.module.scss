@@ -36,39 +36,7 @@ $animation-social-media-delay: $animation-menu-item-delay + 0.3s;
   }
 }
 
-.item {
-  font-size: var(--font-size-4);
-  color: var(--colors-font-secondary);
-  font-weight: 300;
-
-  opacity: 0;
-  transform: translateY(-100%);
-
-  animation: menuItemMount 0.5s forwards;
-
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      animation-delay: $animation-menu-item-delay + ($i * 0.1s);
-    }
-  }
-
-  cursor: pointer;
-
-  transition: color 0.3s, font-weight 0.3s;
-  will-change: color, font-weight;
-
-  &:hover {
-    color: var(--colors-font-primary);
-    font-weight: 400;
-  }
-
-  @include breakpoints.mobile {
-    font-size: var(--font-size-3);
-  }
-}
-
-.content {
-}
+.content {}
 
 .bottom {
   flex: 1;
@@ -90,92 +58,5 @@ $animation-social-media-delay: $animation-menu-item-delay + 0.3s;
       width: var(--spaces-5);
       height: var(--spaces-5);
     }
-  }
-}
-
-.linkedin,
-.whatsapp,
-.github,
-.instagram {
-  opacity: 0;
-  transform: translateX(-100%);
-
-  animation: socialMediaMount 0.5s forwards;
-
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      animation-delay: $animation-social-media-delay + ($i * 0.1s);
-    }
-  }
-
-  cursor: pointer;
-
-  & figure {
-    transition: color 0.3s;
-  }
-}
-
-.linkedin {
-  & figure:hover {
-    color: var(--colors-social-linkedin);
-  }
-}
-
-.whatsapp {
-  & figure:hover {
-    color: var(--colors-social-whatsapp);
-  }
-}
-
-.github {
-  & figure:hover {
-    color: var(--colors-social-github);
-  }
-}
-
-.instagram {
-  & figure:hover {
-    color: var(--colors-social-instagram);
-  }
-}
-
-.avatar {
-  opacity: 0;
-  transform: translateX(-100%);
-
-  animation: avatarMount 0.5s forwards;
-  animation-delay: $animation-avatar-delay;
-}
-
-@keyframes avatarMount {
-  from {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes menuItemMount {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes socialMediaMount {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

@@ -1,0 +1,21 @@
+.wrapper {
+}
+
+.content {
+  display: flex;
+  gap: var(--spaces-8);
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--spaces-30) 0;
+
+  @include breakpoints.mobile {
+    flex-direction: column;
+  }
+}
+
+.react {
+  figure {
+    color: var(--color-react);
+  }
+}

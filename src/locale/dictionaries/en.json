@@ -1,0 +1,159 @@
+{
+    "title": "Lucas Costa Amaral - Senior Front End Developer",
+    "description": "Senior Front End Developer, specialized in React.js, React Native and Node.js. Get in touch!",
+    "common": {
+        "years": "years"
+    },
+    "home": {
+        "sections": {
+            "about": "about-me",
+            "jobs": "jobs",
+            "skills": "skills",
+            "contact": "contact"
+        },
+        "translate_button": "Translate to Human Language",
+        "go_back_button": "Go Back",
+        "menu": {
+            "about": "About me",
+            "jobs": "Jobs",
+            "contact": "Contact"
+        },
+        "profile": {
+            "age": "27 years old",
+            "position": "Senior Front End Developer",
+            "code": {
+                "desktop": [
+                    "class Developer {",
+                    "    public name: string = 'Lucas Costa Amaral';",
+                    "    public age: number = 27;",
+                    "    public stack: Technology[] = ['ReactJS', 'React Native', 'NodeJS'];",
+                    "}",
+                    " ",
+                    "new Developer();"
+                ],
+                "mobile": [
+                    "class Developer {",
+                    "    public name: string =",
+                    "        'Lucas Costa Amaral';",
+                    "    public age: number = 27;",
+                    "    public stack: Technology[] = [",
+                    "        'ReactJS',",
+                    "        'React Native',",
+                    "        'NodeJS'",
+                    "    ];",
+                    "}",
+                    " ",
+                    "new Developer();"
+                ]
+            }
+        },
+        "about": {
+            "code": {
+                "desktop": [
+                    "Hey, my name is 'Lucas', 27 years old, living in 'Tubarão, SC, Brazil', and I’m a front end developer.",
+                    " ",
+                    "My development career started in a very different way. Back in 2016, I started a psychology degree",
+                    "because I had won a scholarship. But I quickly realized that it wasn’t for me. So, I had to make",
+                    "the tough decision to give up the scholarship and go after something that made more sense for me.",
+                    " ",
+                    "That same year, I enrolled in an IT course in my city, mainly because (<s>I didn’t want my parents</s>",
+                    "<s>lecturing me for doing nothing at home</s>) I’ve always had an affinity for computers since I was a kid.",
+                    " ",
+                    "Honestly, before starting the course, I thought I’d learn things like formatting computers or fixing hardware.",
+                    "But... I was so wrong! When I started learning about programming logic and algorithms, that’s when",
+                    "it hit me—this is what I wanted to do with my life (as weird as that might sound).",
+                    " ",
+                    "I’ve loved programming logic from the very beginning and spent a lot of time studying on my own.",
+                    "Eventually, I got my first internship in 2017, and I haven’t stopped since.",
+                    " ",
+                    "Over the years, I’ve worked with various programming languages. I started with Delphi, moved to PHP, Vanilla JS,",
+                    "JQuery, AngularJS, and eventually found my way to my favorites: 'React.js' and 'Node.js'.",
+                    " ",
+                    "That’s when I decided to specialize for real. Since then, I’ve been working with 'React.js' for web development,",
+                    "'React Native' for mobile app development, and 'Node.js' for API creation."
+                ],
+                "mobile": [
+                    "Hey, I‘m 'Lucas', 27 years old,",
+                    "living in 'Tubarão, SC, Brazil',",
+                    "and I’m a front end developer.",
+                    " ",
+                    "My development career started in",
+                    "a very different way. Back in 2016,",
+                    "I started a psychology degree",
+                    "because I had won a scholarship.",
+                    "But I quickly realized that it",
+                    "wasn’t for me. So, I had to make",
+                    "the tough decision to give up the",
+                    "scholarship and go after something",
+                    "that made more sense for me.",
+                    " ",
+                    "That same year, I enrolled in",
+                    "an IT course in my city,",
+                    "mainly because (<s>I didn’t want</s>",
+                    "<s>my parents lecturing me for doing</s>",
+                    "<s>nothing at home</s>) I’ve always had",
+                    "an affinity for computers since",
+                    "I was a kid.",
+                    " ",
+                    "Honestly, before starting the",
+                    "course, I thought I’d learn things",
+                    "like formatting computers or fixing",
+                    "hardwares.",
+                    "But... I was so wrong! When I",
+                    "started learning about programming",
+                    "logic and algorithms, that’s when",
+                    "it hit me—this is what I wanted",
+                    "to do with my life",
+                    "(as weird as that might sound).",
+                    " ",
+                    "I’ve loved programming logic from",
+                    "the very beginning and spent a lot",
+                    "of time studying on my own.",
+                    "Eventually, I got my first",
+                    "internship in 2017, and I haven’t",
+                    "stopped since.",
+                    " ",
+                    "Over the years, I’ve worked with",
+                    "various programming languages.",
+                    "I started with Delphi, moved to PHP,",
+                    "Vanilla JS, JQuery, AngularJS, and",
+                    "eventually found my way to my",
+                    "favorites: 'React.js' and 'Node.js'.",
+                    " ",
+                    "That’s when I decided to specialize ",
+                    "for real. Since then, I’ve been",
+                    "working with 'React.js' for web,",
+                    "'React Native' for mobile apps",
+                    "and 'Node.js' for APIs creation."
+                ]
+            }
+        },
+        "contact": {
+            "title": "Wanna build an app?",
+            "subtitle": "Get in touch!",
+            "fields": {
+                "name": {
+                    "label": "Name",
+                    "placeholder": "Your name"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "Your best email"
+                },
+                "message": {
+                    "label": "Message",
+                    "placeholder": "Message here..."
+                }
+            },
+            "errors": {
+                "name_required": "Name is required",
+                "email_required": "Email is required",
+                "message_required": "Message is required",
+                "email_invalid": "Invalid email"
+            },
+            "send_button": "Send",
+            "thanks_message": "Thanks for reaching out!",
+            "success_message": "I'll get back to you soon."
+        }
+    }
+}

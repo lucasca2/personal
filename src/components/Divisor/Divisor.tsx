@@ -1,5 +1,6 @@
 import { classNames } from "@/utils/classNames";
 import styles from "./Divisor.module.scss";
+import { Animate } from "../Animate/Animate";
 
 type DivisorProps = {
   children: React.ReactNode;
@@ -11,5 +12,9 @@ export const Divisor = ({ children, withLines = false }: DivisorProps) => {
     [styles.withLines]: withLines,
   });
 
-  return <div className={className}>{children}</div>;
+  return (
+    <Animate animation="slideDown" className={className}>
+      {children}
+    </Animate>
+  );
 };

@@ -2,17 +2,21 @@ import { TypingText } from "@/components/TypingText/TypingText";
 
 import styles from "./CodeSection.module.scss";
 import { getDelay, getDuration, injectReservedWordsClassNames } from "./utils";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { randomKey } from "@/utils/randomKey";
 
 type EditorSectionProps = {
   lines: string[];
+  shouldStart?: boolean;
 };
 
-export const CodeSection = ({ lines }: EditorSectionProps) => {
+export const CodeSection = React.memo(({
+  lines,
+  shouldStart = true,
+}: EditorSectionProps) => {
   const key = useMemo(() => {
     return randomKey();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lines]);
 
   return (
@@ -34,6 +38,7 @@ export const CodeSection = ({ lines }: EditorSectionProps) => {
             width={line.length}
             duration={duration}
             delay={delay}
+            shouldStart={shouldStart}
             dangerouslySetInnerHTML={{
               __html: injectReservedWordsClassNames(line),
             }}
@@ -42,4 +47,6 @@ export const CodeSection = ({ lines }: EditorSectionProps) => {
       })}
     </div>
   );
-};
+});
+
+CodeSection.displayName = "CodeSection";

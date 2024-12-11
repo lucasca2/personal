@@ -1,0 +1,39 @@
+:global(.light) {
+  --colors-components-pattern-background: rgba(255, 255, 255, 0.2);
+}
+
+:global(.dark) {
+  --colors-components-pattern-background: rgba(0, 0, 0, 0.1);
+}
+
+.background {
+  color: var(--colors-components-pattern-background);
+
+  transition: color .3s;
+
+  svg {
+    max-width: 50vw;
+    height: auto;
+  }
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@include breakpoints.mobile {
+  .left,
+  .right {
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -2,5 +2,23 @@
 }
 
 .content {
+  opacity: 0;
+  transform: translateX(-5%);
   padding: var(--spaces-30) 0;
+}
+
+.inView {
+  animation: slideIn .5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

@@ -5,7 +5,7 @@ export const useMedia = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 1025);
     };
 
     handleResize();

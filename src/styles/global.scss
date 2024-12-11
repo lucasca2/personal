@@ -1,5 +1,11 @@
 :root {
-  --root-font-size: 10px; // 1rem === 10px;
+  // 1192px = 100vw;
+  // 1192px = 10px;
+  // 10px = ?vw;
+  // 10px = 1vw;
+
+  // --root-font-size: 0.8389261745vw; //10px; // 1vw; // 1rem === 10px;
+  // --root-font-size: 10px; // 1vw; // 1rem === 10px;
 
   /* -------- Width -------- */
 
@@ -94,8 +100,8 @@ html.light {
   // Font Colors
 
   --colors-font-primary: var(--colors-base-black);
-  --colors-font-secondary: var(--colors-light-gray-500);
-  --colors-font-placeholder: var(--colors-light-gray-300);
+  --colors-font-secondary: var(--colors-light-gray-600);
+  --colors-font-placeholder: var(--colors-light-gray-500);
 
   // Social Medias
 
@@ -103,6 +109,10 @@ html.light {
   --colors-social-whatsapp: #25d366;
   --colors-social-github: #181717;
   --colors-social-instagram: #e1306c;
+
+  // Technologies
+  --color-react: #4cbcd6;
+  //
 }
 
 html.dark {
@@ -122,6 +132,9 @@ html.dark {
   --colors-social-whatsapp: #25d366;
   --colors-social-github: #ffffff;
   --colors-social-instagram: #e1306c;
+
+  // Technologies
+  --color-react: #4cbcd6;
 }
 
 * {
@@ -150,3 +163,55 @@ textarea,
 button {
   font-family: var(--default-font-family);
 }
+
+:root {
+  --root-font-size: 2.6vw;
+  // --root-font-size: 10px;
+
+  @media (min-width: 390px) {
+    --root-font-size: 10px;
+  }
+
+  @media (min-width: 1025px) {
+    --root-font-size: 0.63vw;
+  }
+
+  @media (min-width: 1920px) {
+    --root-font-size: 12px;
+  }
+
+  @media (min-width: 3000px) {
+    --root-font-size: 0.43vw;
+  }
+
+  @media (min-width: 4000px) {
+    --root-font-size: 0.33vw;
+  }
+}
+
+// 2560 = 100
+// 13 = 0.5078125
+
+// @media (min-width: 1920px) {
+//   :root {
+//     --root-font-size: 12px;
+//   }
+// }
+
+// @media (min-width: 1366px) and (max-width: 1919px) {
+//   :root {
+//     --root-font-size: 0.65vw;
+//   }
+// }
+
+// @media (max-width: 800px) {
+//   :root {
+//     --root-font-size: 10px;
+//   }
+// }
+
+// @media (max-width: 380px) {
+//   :root {
+//     --root-font-size: 2.631578947368421vw;
+//   }
+// }

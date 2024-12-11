@@ -1,0 +1,80 @@
+.slideUp__initial {
+  opacity: 0;
+  transform: translateY(10%);
+}
+
+.slideUp {
+  animation: slideUpAnimation 0.5s ease-out forwards;
+  animation-delay: var(--animation-delay);
+}
+
+@keyframes slideUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideRight__initial {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.slideRight {
+  animation: slideRightAnimation 0.5s ease-out forwards;
+  animation-delay: var(--animation-delay);
+}
+
+@keyframes slideRightAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideDown__initial {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+
+.slideDown {
+  animation: slideDownAnimation 0.5s ease-out forwards;
+  animation-delay: var(--animation-delay);
+}
+
+@keyframes slideDownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn__initial {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeInAnimation .5s ease-out forwards;
+  animation-delay: var(--animation-delay);
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

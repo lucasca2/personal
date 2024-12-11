@@ -60,6 +60,10 @@
   & .number {
     color: var(--colors-code-number);
   }
+
+  s {
+    opacity: .5;
+  }
 }
 
 @keyframes typing {

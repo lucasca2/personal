@@ -1,0 +1,74 @@
+.socialMedias {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--spaces-14);
+
+  & figure {
+    color: var(--colors-font-secondary);
+  }
+
+  @include breakpoints.mobile {
+    gap: var(--spaces-8);
+
+    & figure {
+      width: var(--spaces-5);
+      height: var(--spaces-5);
+    }
+  }
+}
+
+.linkedin,
+.whatsapp,
+.github,
+.instagram {
+  opacity: 0;
+
+  transform: translateX(-100%);
+
+  animation: socialMediaMount 0.5s forwards;
+
+  cursor: pointer;
+
+  & figure {
+    transition: color 0.3s;
+  }
+}
+
+.linkedin {
+  & figure:hover {
+    color: var(--colors-social-linkedin);
+  }
+}
+
+.whatsapp {
+  & figure:hover {
+    color: var(--colors-social-whatsapp);
+  }
+}
+
+.github {
+  & figure:hover {
+    color: var(--colors-social-github);
+  }
+}
+
+.instagram {
+  & figure:hover {
+    color: var(--colors-social-instagram);
+  }
+}
+
+@keyframes socialMediaMount {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

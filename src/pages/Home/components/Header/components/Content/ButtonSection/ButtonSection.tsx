@@ -1,21 +1,31 @@
 "use client";
 
 import { Button } from "@/components/Button/Button";
+import { getDelay } from "@/components/CodeSection/utils";
+import { CODE_PROFILE_EN } from "@/pages/Home/components/Header/constants";
 
 import { CSSProperties, useMemo } from "react";
 import { useShouldHide } from "@/hooks/useShouldHide";
 import { classNames } from "@/utils/classNames";
 
-import styles from "./GoBackButton.module.scss";
+import styles from "./ButtonSection.module.scss";
+import { useMedia } from "@/hooks/useMedia";
 
-type GoBackButtonProps = {
+type ButtonSectionProps = {
   onClick: () => void;
-  isHuman: boolean;
+  shouldShow: boolean;
+  showUpDelay: number;
+  children: React.ReactNode;
 };
 
-export const GoBackButton = ({ onClick, isHuman }: GoBackButtonProps) => {
+export const ButtonSection = ({
+  onClick,
+  shouldShow,
+  showUpDelay,
+  children,
+}: ButtonSectionProps) => {
   const { shouldHide, shouldRender } = useShouldHide({
-    condition: !isHuman,
+    condition: !shouldShow,
     timeout: 300,
   });
 
@@ -26,16 +36,16 @@ export const GoBackButton = ({ onClick, isHuman }: GoBackButtonProps) => {
 
   if (!shouldRender) return;
 
-  const slideInDelay = 1;
-
   const variables = {
-    ["--slide-in-delay"]: `${slideInDelay}s`,
+    ["--slide-in-delay"]: `${showUpDelay}s`,
   } as CSSProperties;
+
+  if(!children) return null;
 
   return (
     <div className={className}>
       <Button style={variables} onClick={onClick} disabled={shouldHide}>
-        Go Back
+        {children}
       </Button>
     </div>
   );
