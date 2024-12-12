@@ -9,13 +9,15 @@
             "about": "about-me",
             "jobs": "jobs",
             "skills": "skills",
-            "contact": "contact"
+            "contact": "contact",
+            "projects": "projects"
         },
         "translate_button": "Translate to Human Language",
         "go_back_button": "Go Back",
         "menu": {
             "about": "About me",
-            "jobs": "Jobs",
+            "home": "Home",
+            "projects": "Projects",
             "contact": "Contact"
         },
         "profile": {
@@ -155,5 +157,8 @@
             "thanks_message": "Thanks for reaching out!",
             "success_message": "I'll get back to you soon."
         }
+    },
+    "projects": {
+        "title": "Coming soon!"
     }
 }

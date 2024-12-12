@@ -5,6 +5,7 @@ import { getStoragedTheme } from "@/components/ThemeToggle/ThemeToggle.actions";
 import { ThemeProvider } from "@/components/ThemeToggle/useTheme";
 import { getDictionary, getStoragedLocale } from "@/locale/actions";
 import { DictionaryProvider } from "@/locale/useDictionary";
+import { BackgroundPattern } from "@/components/BackgroundPattern/BackgroundPattern";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -36,7 +37,13 @@ export default async function RootLayout({
       </head>
       <DictionaryProvider>
         <ThemeProvider>
-          <body className={firaCode.className}>{children}</body>
+          <body className={firaCode.className}>
+            <BackgroundPattern direction="left" />
+            <BackgroundPattern direction="right" />
+            <main>
+              {children}
+            </main>
+          </body>
         </ThemeProvider>
       </DictionaryProvider>
     </html>

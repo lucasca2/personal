@@ -10,3 +10,13 @@
     padding: 0 var(--spaces-8);
   }
 }
+
+.header {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding-top: var(--spaces-4);
+}

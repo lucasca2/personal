@@ -9,13 +9,15 @@
             "about": "sobre-mim",
             "jobs": "trabalhos",
             "skills": "habilidades",
-            "contact": "contato"
+            "contact": "contato",
+            "projects": "projetos"
         },
         "translate_button": "Traduzir para Linguagem Humana",
         "go_back_button": "Voltar",
         "menu": {
             "about": "Sobre mim",
-            "jobs": "Trabalhos",
+            "home": "Início",
+            "projects": "Projetos",
             "contact": "Contato"
         },
         "profile": {
@@ -151,5 +153,8 @@
             "thanks_message": "Obrigado por entrar em contato!",
             "success_message": "Em breve retornarei."
         }
+    },
+    "projects": {
+        "title": "Em breve!"
     }
 }

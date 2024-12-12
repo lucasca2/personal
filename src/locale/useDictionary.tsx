@@ -35,12 +35,14 @@ const DictionaryProvider = ({ children }: DictionaryProviderProps) => {
     fetchInitialLocale();
   }, []);
 
-  const handleSetLocale = async (locale: Locale) => {
-    await setStoragedLocale(locale);
-    setLocale(locale);
+  const handleSetLocale = async (_locale: Locale) => {
+    if (locale !== _locale) {
+      await setStoragedLocale(_locale);
+      setLocale(_locale);
 
-    const selectedDictionary = await getDictionary();
-    setDictionary(selectedDictionary);
+      const selectedDictionary = await getDictionary();
+      setDictionary(selectedDictionary);
+    }
   };
 
   return (

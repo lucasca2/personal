@@ -11,6 +11,8 @@ import { Sun } from "./icons/Sun";
 import { Whatsapp } from "./icons/Whatsapp";
 import { Node } from "./icons/Node";
 import { React } from "./icons/React";
+import { Close } from "./icons/Close";
+import { Menu } from "./icons/Menu";
 
 const icons = {
   instagram: Instagram,
@@ -26,6 +28,9 @@ const icons = {
 
   node: Node,
   react: React,
+
+  close: Close,
+  menu: Menu,
 };
 
 export type IconName = keyof typeof icons;

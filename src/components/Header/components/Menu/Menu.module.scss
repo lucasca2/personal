@@ -1,0 +1,218 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spaces-16);
+
+  @include breakpoints.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--colors-menu-background);
+    z-index: 1;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--spaces-50) 0 var(--spaces-20);
+    gap: var(--spaces-10);
+
+    opacity: 1;
+
+    .item {
+      color: var(--colors-font-primary);
+    }
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    transition: visibility 0.3s, transform 0.3s, opacity 0.3s;
+    will-change: visibility, transform, opacity;
+
+    &.open {
+      opacity: 0.9;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.closeButton {
+  @include breakpoints.mobile {
+    position: absolute;
+    top: var(--spaces-20);
+    right: var(--spaces-20);
+  }
+}
+
+.menuButtonWrapper {
+  @include breakpoints.mobile {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.menuButton {
+  display: none;
+
+  @include breakpoints.mobile {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+
+    transition: color 0.3s;
+    will-change: color;
+    color: var(--colors-font-secondary);
+
+    &:hover {
+      color: var(--colors-font-primary);
+    }
+
+    .line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: var(--spaces-5);
+      height: 1.5px;
+      border-radius: 1.5px;
+
+      background-color: currentColor;
+
+      transition: top 0.3s, left 0.3s, bottom 0.3s, transform 0.3s, opacity 0.3s;
+      will-change: top, left, bottom, transform, opacity;
+
+      &:nth-child(1) {
+        animation: line-1__closed 0.3s forwards;
+      }
+
+      &:nth-child(2) {
+        animation: line-2__closed 0.3s forwards;
+      }
+
+      &:nth-child(3) {
+        bottom: var(--spaces-1_5);
+        left: var(--spaces-0_5);
+        transform: none;
+        width: var(--spaces-3);
+      }
+    }
+
+    &__open {
+      color: var(--colors-font-primary);
+
+      .line {
+        &:nth-child(1) {
+          animation: line-1__opened 0.3s forwards;
+        }
+
+        &:nth-child(2) {
+          animation: line-2__opened 0.3s forwards;
+        }
+
+        &:nth-child(3) {
+          bottom: 50%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes line-1__opened {
+  0% {
+    top: var(--spaces-1_5);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes line-2__opened {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes line-1__closed {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: var(--spaces-1_5);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes line-2__closed {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.item {
+  font-size: var(--font-size-4);
+  color: var(--colors-font-secondary);
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition: color 0.3s, font-weight 0.3s;
+  will-change: color, font-weight;
+
+  &:hover {
+    color: var(--colors-font-primary);
+    font-weight: 400;
+  }
+}
