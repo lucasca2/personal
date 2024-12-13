@@ -207,6 +207,10 @@ html {
   will-change: background-color;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   position: relative;
 
